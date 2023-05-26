@@ -1,0 +1,10 @@
+FROM ubuntu:latest
+
+WORKDIR $HOME
+USER root
+
+RUN apt update -y; apt upgrade -y;
+
+RUN apt install bash curl sudo -y
+
+ENTRYPOINT [ "bash" ]

@@ -1,0 +1,9 @@
+FROM alpine:3.18
+
+WORKDIR $HOME
+
+RUN apk add --no-cache bash curl sudo
+
+RUN bash -c "$(curl -fsSLH 'Cache-Control: no-cache' https://raw.githubusercontent.com/asolopovas/dotfiles/master/init.sh)"
+
+ENTRYPOINT [ "bash" ]
