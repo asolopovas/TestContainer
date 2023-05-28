@@ -3,6 +3,7 @@
 default:
 	docker run -w /root/ --rm -it test-container
 
+build-all: build-alpine build-alpine318 build-ubuntu
 
 run-alpine:
 	docker run --env-file .env -w /root/ --rm -it test-container-alpine
