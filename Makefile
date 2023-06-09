@@ -13,8 +13,8 @@ run-ubuntu:
 	docker run --env-file .env -w /root/ --rm -it test-container-ubuntu
 
 build-alpine:
-	docker build --no-cache -t test-container-alpine - < Dockerfile-alpine
+	docker build --env-file .env --no-cache -t test-container-alpine - < Dockerfile-alpine
 build-alpine318:
-	docker build --no-cache -t test-container-alpine318 - < Dockerfile-alpine318
+	docker build --env-file .env --no-cache -t test-container-alpine318 - < Dockerfile-alpine318
 build-ubuntu:
-	docker build --no-cache -t test-container-ubuntu - < Dockerfile-ubuntu
+	docker build --env-file .env --no-cache -t test-container-ubuntu - < Dockerfile-ubuntu
