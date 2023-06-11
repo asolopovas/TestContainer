@@ -23,11 +23,11 @@ run-ubuntu:
 	docker run --env-file .env -w /root/ --rm -it test-container-ubuntu
 
 build-alpine:
-	docker build $(foreach var,$(shell sed 's/=.*//' .env),--build-arg $(var)=$($(var))) --no-cache -t test-container-alpine - < dockerfile-alpine
+	docker build $(foreach var,$(shell sed 's/=.*//' .env),--build-arg $(var)=$($(var))) --no-cache -t test-container-alpine - < Dockerfile-alpine
 
 build-alpine318:
-	docker build $(foreach var,$(shell sed 's/=.*//' .env),--build-arg $(var)=$($(var))) --no-cache -t test-container-alpine318 - < dockerfile-alpine318
+	docker build $(foreach var,$(shell sed 's/=.*//' .env),--build-arg $(var)=$($(var))) --no-cache -t test-container-alpine318 - < Dockerfile-alpine318
 
 build-ubuntu:
-	docker build $(foreach var,$(shell sed 's/=.*//' .env),--build-arg $(var)=$($(var))) --no-cache -t test-container-ubuntu - < dockerfile-ubuntu
+	docker build $(foreach var,$(shell sed 's/=.*//' .env),--build-arg $(var)=$($(var))) --no-cache -t test-container-ubuntu - < Dockerfile-ubuntu
 
