@@ -14,7 +14,7 @@ default:
 build-all: build-alpine build-alpine318 build-ubuntu
 
 run-alpine:
-	docker run --env-file .env -w /root/ --rm -it test-container-alpine
+	docker run --dns 8.8.8.8 --env-file .env -w /root/ --rm -it test-container-alpine
 
 run-alpine318:
 	docker run --env-file .env -w /root/ --rm -it test-container-alpine318

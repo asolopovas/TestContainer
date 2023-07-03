@@ -2,10 +2,10 @@ FROM alpine:3.16
 
 WORKDIR $HOME
 
-RUN apk add --no-cache bash curl sudo
+RUN apk add --no-cache bash curl sudo coreutils
 
 ARG FISH=${FISH} FZF=${FZF} FDFIND=${FDFIND} NVIM=${NVIM} NVM=${NVM} OHMYFISH=${OHMYFISH} OHMYBASH=${OHMYBASH} NODE_VER=${NODE_VER}
-RUN FISH=${FISH} FZF=${FZF} FDFIND=${FDFIND} NVIM=${NVIM} NVM=${NVM} OHMYFISH=${OHMYFISH} OHMYBASH=${OHMYBASH} NODE_VER=${NODE_VER} UNATTENDED=true \
-    bash -c "$(curl -fsSL http://raw.githubusercontent.com/asolopovas/dotfiles/master/init.sh)"
+# RUN FISH=${FISH} FZF=${FZF} FDFIND=${FDFIND} NVIM=${NVIM} NVM=${NVM} OHMYFISH=${OHMYFISH} OHMYBASH=${OHMYBASH} NODE_VER=${NODE_VER} UNATTENDED=true \
+    # bash -c "$(curl -fsSL http://raw.githubusercontent.com/asolopovas/dotfiles/master/init.sh)"
 
 ENTRYPOINT [ "bash" ]
