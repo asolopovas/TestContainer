@@ -1,1 +1,1 @@
-FISH=true FZF=true FDFIND=true NVIM=false NODE=true NODE_VERSION=18.16.1 OHMYFISH=true OHMYBASH=true UNATTENDED=true bash -c "$(curl -fsSLH 'Cache-Control: no-cache' https://raw.githubusercontent.com/asolopovas/dotfiles/master/init.sh)"
+FISH=true FZF=true FDFIND=true NVIM=true NODE=true NODE_VERSION=18.16.1 OHMYFISH=true OHMYBASH=true UNATTENDED=true bash -c "$(curl -fsSLH 'Cache-Control: no-cache' https://raw.githubusercontent.com/asolopovas/dotfiles/master/init.sh)"
