@@ -1,11 +1,7 @@
-FROM alpine:3.16
+FROM alpine:3.18
 
 WORKDIR $HOME
 
-RUN apk add --no-cache bash curl sudo coreutils
-
-ARG FISH=${FISH} FZF=${FZF} FDFIND=${FDFIND} NVIM=${NVIM} NVM=${NVM} OHMYFISH=${OHMYFISH} OHMYBASH=${OHMYBASH} NODE_VERSION=${NODE_VERSION}
-RUN FISH=${FISH} FZF=${FZF} FDFIND=${FDFIND} NVIM=${NVIM} NVM=${NVM} OHMYFISH=${OHMYFISH} OHMYBASH=${OHMYBASH} NODE_VER=${NODE_VER} UNATTENDED=true \
-    bash -c "$(curl -fsSL http://raw.githubusercontent.com/asolopovas/dotfiles/master/init.sh)"
+RUN apk add --no-cache bash curl sudo coreutils tail
 
 ENTRYPOINT [ "bash" ]
