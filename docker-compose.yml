@@ -6,16 +6,6 @@ services:
         build:
             context: .
             dockerfile: dockerfile.alpine
-            args:
-                FISH: ${FISH}
-                FZF: ${FZF}
-                FDFIND: ${FDFIND}
-                NVIM: ${NVIM}
-                NODE: ${NODE}
-                NODE_VERSION: ${NODE_VERSION}
-                OHMYFISH: ${OHMYFISH}
-                OHMYBASH: ${OHMYBASH}
-                UNATTENDED: ${UNATTENDED}
         volumes:
             - ./scripts:/scripts
         logging:
@@ -23,7 +13,7 @@ services:
             options:
                 max-size: "200k"
                 max-file: "10"
-        commnad: tail -f /dev/null
+        command: tail -f /dev/null
 
     ubuntu:
         env_file:
@@ -31,16 +21,6 @@ services:
         build:
             context: .
             dockerfile: dockerfile.ubuntu
-            args:
-                FISH: ${FISH}
-                FZF: ${FZF}
-                FDFIND: ${FDFIND}
-                NVIM: ${NVIM}
-                NODE: ${NODE}
-                NODE_VERSION: ${NODE_VERSION}
-                OHMYFISH: ${OHMYFISH}
-                OHMYBASH: ${OHMYBASH}
-                UNATTENDED: ${UNATTENDED}
         volumes:
             - ./scripts:/scripts
         logging:
@@ -48,4 +28,4 @@ services:
             options:
                 max-size: "200k"
                 max-file: "10"
-        commnad: tail -f /dev/null
+        command: tail -f /dev/null

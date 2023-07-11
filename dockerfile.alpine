@@ -1,7 +1,7 @@
 FROM alpine:3.18
 WORKDIR /scripts
-
 RUN apk add --no-cache bash curl sudo coreutils
 
-ENTRYPOINT [ "/scripts/entry.sh" ]
+COPY scripts/entry.sh /usr/local/bin
+ENTRYPOINT [ "entry.sh" ]
 

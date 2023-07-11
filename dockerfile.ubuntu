@@ -4,4 +4,5 @@ WORKDIR /scripts
 RUN apt update -y; apt upgrade -y;
 RUN apt install bash curl sudo -y
 
+COPY scripts/entry.sh /usr/local/bin
 ENTRYPOINT [ "/scripts/entry.sh" ]
