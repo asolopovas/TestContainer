@@ -23,6 +23,7 @@ services:
             options:
                 max-size: "200k"
                 max-file: "10"
+        commnad: tail -f /dev/null
 
     ubuntu:
         env_file:
@@ -47,3 +48,4 @@ services:
             options:
                 max-size: "200k"
                 max-file: "10"
+        commnad: tail -f /dev/null
