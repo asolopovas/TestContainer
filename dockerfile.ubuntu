@@ -1,10 +1,7 @@
 FROM ubuntu:latest
-
-WORKDIR $HOME
-USER root
+WORKDIR /scripts
 
 RUN apt update -y; apt upgrade -y;
-
 RUN apt install bash curl sudo -y
 
-ENTRYPOINT [ "bash" ]
+ENTRYPOINT [ "/scripts/entry.sh" ]

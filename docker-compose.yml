@@ -5,7 +5,7 @@ services:
             - .env
         build:
             context: .
-            dockerfile: Dockerfile-alpine318
+            dockerfile: dockerfile.alpine
             args:
                 FISH: ${FISH}
                 FZF: ${FZF}
@@ -18,7 +18,6 @@ services:
                 UNATTENDED: ${UNATTENDED}
         volumes:
             - ./scripts:/scripts
-        entry: tail -f /dev/null
         logging:
             driver: "json-file"
             options:
@@ -30,7 +29,7 @@ services:
             - .env
         build:
             context: .
-            dockerfile: Dockerfile-ubuntu
+            dockerfile: dockerfile.ubuntu
             args:
                 FISH: ${FISH}
                 FZF: ${FZF}
@@ -43,7 +42,6 @@ services:
                 UNATTENDED: ${UNATTENDED}
         volumes:
             - ./scripts:/scripts
-        entry: tail -f /dev/null
         logging:
             driver: "json-file"
             options:
